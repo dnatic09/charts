@@ -11,8 +11,8 @@ spec:
   type: {{ .Values.serviceType }}
   ports:
     - name: serving
-      port: 9090
-      targetPort: serving
+      port: 8501
+      targetPort: 8501
   selector:
     release: {{ .Release.Name | quote }}
     app: {{ template "tensorflow-serving.name" . }}
